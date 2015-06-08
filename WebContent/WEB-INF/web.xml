@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Snapost3</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+<servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SnapostnewUpload</servlet-name>
+    <servlet-class>Servlet.SnapostnewUpload</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SnapostnewAlbum</servlet-name>
+    <servlet-class>Servlet.SnapostnewAlbum</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SnapostdeletePhoto</servlet-name>
+    <servlet-class>Servlet.SnapostdeletePhoto</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SnapostdeleteAlbum</servlet-name>
+    <servlet-class>Servlet.SnapostdeleteAlbum</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SnapostAddFriend</servlet-name>
+    <servlet-class>Servlet.SnapostAddFriend</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SnapostCloseUser</servlet-name>
+    <servlet-class>Servlet.SnapostCloseUser</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SnapostDeleteFriend</servlet-name>
+    <servlet-class>Servlet.SnapostDeleteFriend</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SnapostLogin</servlet-name>
+    <servlet-class>Servlet.SnapostLogin</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SnapostnewRegister</servlet-name>
+    <servlet-class>Servlet.SnapostnewRegister</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SnapostRegister</servlet-name>
+    <servlet-class>Servlet.SnapostRegister</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SnapostSetting</servlet-name>
+    <servlet-class>Servlet.SnapostSetting</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SnapostWAnnounce</servlet-name>
+    <servlet-class>Servlet.SnapostWAnnounce</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SnapostWarnUser</servlet-name>
+    <servlet-class>Servlet.SnapostWarnUser</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Snapostblack</servlet-name>
+    <servlet-class>Servlet.Snapostblack</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SnapostnewShare</servlet-name>
+    <servlet-class>Servlet.SnapostnewShare</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SnapostpicProcess</servlet-name>
+    <servlet-class>Servlet.SnapostpicProcess</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SnapostsaveNewPic</servlet-name>
+    <servlet-class>Servlet.SnapostsaveNewPic</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SnapostPassword</servlet-name>
+    <servlet-class>Servlet.SnapostPassword</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>SnapostnewUpload</servlet-name>
+    <url-pattern>/SnapostnewUpload</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SnapostnewAlbum</servlet-name>
+    <url-pattern>/SnapostnewAlbum</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SnapostdeletePhoto</servlet-name>
+    <url-pattern>/SnapostdeletePhoto</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SnapostdeleteAlbum</servlet-name>
+    <url-pattern>/SnapostdeleteAlbum</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SnapostAddFriend</servlet-name>
+    <url-pattern>/SnapostAddFriend</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SnapostCloseUser</servlet-name>
+    <url-pattern>/SnapostCloseUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SnapostDeleteFriend</servlet-name>
+    <url-pattern>/SnapostDeleteFriend</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SnapostLogin</servlet-name>
+    <url-pattern>/SnapostLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SnapostnewRegister</servlet-name>
+    <url-pattern>/SnapostnewRegister</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SnapostRegister</servlet-name>
+    <url-pattern>/SnapostRegister</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SnapostSetting</servlet-name>
+    <url-pattern>/SnapostSetting</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SnapostWAnnounce</servlet-name>
+    <url-pattern>/SnapostWAnnounce</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SnapostWarnUser</servlet-name>
+    <url-pattern>/SnapostWarnUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Snapostblack</servlet-name>
+    <url-pattern>/Snapostblack</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SnapostnewShare</servlet-name>
+    <url-pattern>/SnapostnewShare</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SnapostpicProcess</servlet-name>
+    <url-pattern>/SnapostpicProcess</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SnapostsaveNewPic</servlet-name>
+    <url-pattern>/SnapostsaveNewPic</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SnapostPassword</servlet-name>
+    <url-pattern>/SnapostPassword</url-pattern>
+  </servlet-mapping>
+</web-app>
