@@ -179,8 +179,8 @@
 ```
 #### 提交方法：
 - 解压我发的Snapost3.zip，获得一个Snapost3文件夹
-- Eclipse打开，选择Import->Git->Projects from git->Existing local repository->Add...
-- 选中Snapost3文件夹->finish，返回之前的界面，选中Snapost3/.git，next->Import existing project->next->finish
+- Eclipse打开，选择Import->Git->Projects from git->Clone URI->把https://github.com/2bdenny/Snapost3/复制在第一个空格，输自己的帐号密码
+- 点接着不停点next和finish
 - 到这边为止，项目导入完毕，下面开始传Git
 
 #### 提交步骤
