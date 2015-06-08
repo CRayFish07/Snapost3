@@ -181,3 +181,32 @@
 - 解压我发的Snapost3.zip，获得一个Snapost3文件夹
 - Eclipse打开，选择Import->Git->Projects from git->Existing local repository->Add...
 - 选中Snapost3文件夹->finish，返回之前的界面，选中Snapost3/.git，next->Import existing project->next->finish
+- 到这边为止，项目导入完毕，下面开始传Git
+
+#### 提交步骤
+1. 在Snapost3文件夹名字上右键->Team->Pull
+2. 在Snapost3文件夹名字上右键->Team->Commit and Push
+3. 完毕
+
+#### 于是我们的项目大概就只能这样了，下面的方法是补充我们的代码量的
+1. 打开一个你传的文件
+2. 在里面写一堆没有用的代码，例如：
+```
+    int x = 0;
+    while (x){
+        System.out.println("hello, world");
+        int y = x;
+        if (y > 1) int z;
+        else break;
+        /*
+            然后这里可以贴一堆你以前写的，但是根本不会用到的代码
+        */
+    }
+```
+3. 总之就是，不要光写注释。。。
+4. 如果是jsp文件
+```
+    <%
+        /* 跟上面类似的Java代码 */
+    %>
+```
