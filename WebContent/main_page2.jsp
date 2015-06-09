@@ -195,7 +195,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			%>
 				<div class="col-md-4">
 					<div class="thumbnail">
-						<img src="..\iPic\upload\<%=photoname%>"  width="190px" height="160px">
+						<img src="../Snapost3/upload/<%=photoname%>"  width="190px" height="160px">
 						<div class="caption">
 							<h4>
 								Auther: <%=headtitle %>
@@ -285,7 +285,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			%>
 				<div class="col-md-4">
 					<div class="thumbnail">
-						<img alt="" src="..\iPic\upload\<%=photoname%>"  width="190" height="160">
+						<img alt="" src="../Snapost3/upload/<%=photoname%>"  width="190" height="160">
 						<div class="caption">
 							<h4>
 								<%=auther %>
@@ -358,7 +358,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			%>
 				<div class="col-md-4">
 					<div class="thumbnail">
-						<img src="..\iPic\upload\<%=photoname%>"  width="190px" height="160px">
+						<img src="../Snapost3/upload/<%=photoname%>"  width="190px" height="160px">
 						<div class="caption">
 							<h4>
 								Auther: <%=authername %>

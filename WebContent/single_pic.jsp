@@ -98,7 +98,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						
  						System.out.println("single_pic originphotoname:"+originphotoname);
      				 %>
-					<img  width="600px" src="..\iPic\upload\<%=photoname%>" class="img-thumbnail" align="left" height="600px"/>
+					<img  width="600px" src="../Snapost3/upload/<%=photoname%>" class="img-thumbnail" align="left" height="600px"/>
 				</div>
 				<div class="col-md-2 column">
 					 <a href="./picProcess?picNum=<%="1" %>&globalalbumname=<%=albumname %>&originphotoname=<%=originphotoname %>" class="btn btn-info btn-sm" type="button">BlackAndWhite</a>

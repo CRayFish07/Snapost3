@@ -52,7 +52,7 @@ public class Delete
 	
 	public static void main(String[] args)
 	{
-		String[] elements = {"����"};
+		String[] elements = {"zhangsan"};
 		String[] property = {"MNAME"};
 		String table = "Member";
 		String[] type = {"char"};

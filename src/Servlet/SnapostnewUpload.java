@@ -59,37 +59,30 @@ public class SnapostnewUpload extends HttpServlet {
     	//System.out.println("newUpload");
 		request.setCharacterEncoding("utf-8");  
 		response.setContentType("text/html;charset=utf-8");  
-        //Ϊ�������ṩ������Ϣ  
         DiskFileItemFactory factory = new DiskFileItemFactory();  
-        //�����������ʵ��  
         ServletFileUpload sfu = new ServletFileUpload(factory);  
-        //��ʼ����  
         
         sfu.setFileSizeMax(1024*1024);  
-        //ÿ�����������ݻ��װ��һ����Ӧ��FileItem������  
         try {  
             List<FileItem> items = sfu.parseRequest(request);  
             //���ֱ���  
 //            System.out.println(items.size());
             for (int i = 0; i < items.size(); i++) {  
                 FileItem item = items.get(i);  
-//                System.out.println("i="+i);
-                //isFormFieldΪtrue����ʾ�ⲻ���ļ��ϴ�����  
+//                System.out.println("i="+i);  
 //                System.out.println(item.getFieldName());
                 if(!item.isFormField()){  
-//                	System.out.println("item.isFormField=false");
-                    ServletContext sctx = getServletContext();  
-                    //��ô���ļ�������·��  
-                    //upload�µ�ĳ���ļ���   �õ���ǰ���ߵ��û�  �ҵ���Ӧ���ļ���  
-                      
+                	System.out.println(item.getName());
+                	
+                    ServletContext sctx = getServletContext();    
                     String path = sctx.getRealPath("upload");  
-//                    System.out.println(path);  
-                    //����ļ���  
+                    path = request.getSession().getServletContext().getRealPath("/upload");
+                    System.out.println(path);
                     String fileName = item.getName();  
-                    System.out.println(fileName);  
-                    //�÷�����ĳЩƽ̨(����ϵͳ),�᷵��·��+�ļ���  
+                    System.out.println(fileName);
                     fileName = fileName.substring(fileName.lastIndexOf("/")+1);  
-                    File file = new File(path+"\\"+fileName);  
+                    File file = new File(path+"/"+fileName); 
+                   // if (!file.exists()) file.createNewFile();
                     if(file.length()>1024*1024){
                     	response.sendRedirect("sizefalse.jsp");
                     }
@@ -112,7 +105,7 @@ public class SnapostnewUpload extends HttpServlet {
                     	fileName = tt+"."+suffix[1];
  
                     	if(file.exists()){
-                    		file.renameTo(new File(path+"\\"+fileName));
+                    		file.renameTo(new File(path+"/"+fileName));
                     		
                     	}
                     	String username = (String)(request.getSession().getAttribute("name"));
@@ -160,7 +153,7 @@ public class SnapostnewUpload extends HttpServlet {
                 		String[] updatevalues = new String[1];
                 		updatevalues[0] = Integer.toString(updatenum);
                 		
-                		String[] property1 = {"NUMBER"};
+                		String[] property1 = {"id"};
                 		String t = "ALBUM";
                 		String[] type1 = { "int"};
                 		String[] r = {"=","="};

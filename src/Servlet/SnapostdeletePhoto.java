@@ -88,7 +88,7 @@ public class SnapostdeletePhoto extends HttpServlet {
 
         //�÷�����ĳЩƽ̨(����ϵͳ),�᷵��·��+�ļ���  
         photoname = photoname.substring(photoname.lastIndexOf("/")+1);  
-        File file = new File(path+"\\"+photoname);  
+        File file = new File(path+"/"+photoname);  
 	    // ·��Ϊ�ļ��Ҳ�Ϊ�������ɾ��  
 	    if (file.isFile() && file.exists()) {  
 	        file.delete();  
@@ -99,7 +99,7 @@ public class SnapostdeletePhoto extends HttpServlet {
 	    	System.out.println("delete the photo success");
 		/*�����ݿ�ɾ��ͼƬ��¼*/
 		String[] elements = {username,albumname,photoname};
-		String[] property = {"USERNAME","ALBUM_NAME","PHOTO_NAME"};
+		String[] property = {"USERNAME","ALBUM_NAME","PIC_NAME"};
 		String table = "PHOTO";
 		String[] type = {"char","char","char"};
 		String[] restraints = {"=","=","="};
@@ -119,7 +119,7 @@ public class SnapostdeletePhoto extends HttpServlet {
 		String[] updatevalues = new String[1];
 		updatevalues[0] = Integer.toString(updatenum);
 		
-		String[] property1 = {"NUMBER"};
+		String[] property1 = {"id"};
 		String t = "ALBUM";
 		String[] type1 = { "int"};
 		String[] r = {"=","="};

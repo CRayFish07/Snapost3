@@ -88,7 +88,7 @@ public class SnapostpicProcess extends HttpServlet {
             System.out.println("origin:"+originphotoname);
             String picnum = request.getParameter("picNum");
             
-            String photopath = path+"\\"+originphotoname;
+            String photopath = path+"/"+originphotoname;
 
         	java.text.SimpleDateFormat formatter = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         	java.util.Date currTime = new java.util.Date();
@@ -115,7 +115,7 @@ public class SnapostpicProcess extends HttpServlet {
             newphotoname = newphotoname.replace(" ", "");
             newphotoname = newphotoname.replace(":", "");
             System.out.println("newphotoname:"+newphotoname);
-            image.saveAs(path+"\\"+newphotoname);
+            image.saveAs(path+"/"+newphotoname);
         	request.getSession().setAttribute("globalalbumname",albumname);
         	request.getSession().setAttribute("globalphotoname",newphotoname);
         	request.getSession().setAttribute("originphotoname",originphotoname);

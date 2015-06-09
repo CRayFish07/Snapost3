@@ -135,7 +135,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			%>
 				<div class="col-md-4">
 					<div class="thumbnail">
-						<img alt="" src="..\iPic\upload\<%=photoname%>"  width="190" height="160">
+						<img alt="" src="../Snapost3/upload/<%=photoname%>"  width="190" height="160">
 						<div class="caption">
 							<h4>
 								<%=headtitle %>

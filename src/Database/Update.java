@@ -72,7 +72,7 @@ public class Update
 		String[] values = new String[1];
 		values[0] = "1";
 		
-		String[] property1 = {"NUMBER"};
+		String[] property1 = {"id"};
 		String t = "ALBUM";
 		String[] type1 = { "int"};
 		String[] r = {"=","="};

@@ -102,7 +102,7 @@ public class SnapostsaveNewPic extends HttpServlet {
 		String[] updatevalues = new String[1];
 		updatevalues[0] = Integer.toString(updatenum);
 		
-		String[] property1 = {"NUMBER"};
+		String[] property1 = {"id"};
 		String t = "ALBUM";
 		String[] type1 = { "int"};
 		String[] r = {"=","="};

@@ -79,7 +79,7 @@ public class Insert
 			System.out.println(value);
 			
 			//����ָ��
-			String insert = "insert into Photo values(" + value;
+			String insert = "insert into PHOTO values(" + value;
 			System.out.println(insert);
 			
 			//ִ��ָ��

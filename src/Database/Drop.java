@@ -40,7 +40,7 @@ public class Drop
    
 	public static void main(String[] args) 
 	{
-		String friend = "����";
+		String friend = "zhangsan";
 		Drop.DropTable(friend);
 	}
 }
