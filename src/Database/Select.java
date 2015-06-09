@@ -33,19 +33,8 @@ public class Select
 		String passwd = "";
 		try
 		{
-<<<<<<< HEAD
-			
-			/*
-			 * default way to connect the database server
-			 * connection!
-			 * **/
-
-			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;DatabaseName=iPic", "sa", "qinke0704mayday");
-=======
 			Class.forName(driver);
 			con = DriverManager.getConnection(url, user, passwd);
->>>>>>> branch 'master' of https://github.com/2bdenny/Snapost3.git
 			stmt = con.createStatement();
 			
 			String select = "select * from " + table;
@@ -196,14 +185,10 @@ public class Select
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet rs = null;
-<<<<<<< HEAD
-		
-=======
 		String driver = "com.mysql.jdbc.Driver";
 		String url = "jdbc:mysql://localhost:3306/snapost";
 		String user = "root";
 		String passwd = "";
->>>>>>> branch 'master' of https://github.com/2bdenny/Snapost3.git
 		try
 		{
 			Class.forName(driver);
