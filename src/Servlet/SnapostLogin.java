@@ -8,6 +8,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.regex.Pattern;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -199,6 +200,67 @@ public class SnapostLogin extends HttpServlet {
 	 */
 	public void init() throws ServletException {
 		// Put your code here
+		// Put your code here
+    	int n = 1;
+    	int index = n;
+    	int factor = 2;
+    	//System.out.print("The minimum factors of " + n + " is: ");
+    	while(factor <= index){
+    		if(index % factor == 0){
+    			index /= factor;
+    			//System.out.print(factor + " ");
+    		}
+    		else{
+    			factor ++;
+    		}
+    	}
+    	n = 1;
+    	index = n;
+    	factor = 2;
+    	//System.out.print("The minimum factors of " + n + " is: ");
+    	while(factor <= index){
+    		if(index % factor == 0){
+    			index /= factor;
+    			//System.out.print(factor + " ");
+    		}
+    		else{
+    			factor ++;
+    		}
+    	}
+    	n = 1;
+    	index = n;
+    	factor = 2;
+    	//System.out.print("The minimum factors of " + n + " is: ");
+    	while(factor <= index){
+    		if(index % factor == 0){
+    			index /= factor;
+    			//System.out.print(factor + " ");
+    		}
+    		else{
+    			factor ++;
+    		}
+    	}
 	}
+	
+	/*
+	public static boolean isInteger(String str) {  
+	    Pattern pattern = Pattern.compile("[0-9]*");  
+	    return pattern.matcher(str).matches();  
+	  }
 
+	 public static boolean isMessyCode(String str) {
+		  for (int i = 0; i < str.length(); i++) {
+		   char c = str.charAt(i);
+		   // 当从Unicode编码向某个字符集转换时，如果在该字符集中没有对应的编码，则得到0x3f（即问号字符?）
+		   //从其他字符集向Unicode编码转换时，如果这个二进制数在该字符集中没有标识任何的字符，则得到的结果是0xfffd
+		   //System.out.println("--- " + (int) c);
+		   if ((int) c == 0xfffd) {
+		    // 存在乱码
+		    //System.out.println("存在乱码 " + (int) c);
+		    return true;
+		   }
+		  }
+		  return false;
+		 }
+	 */
 }
