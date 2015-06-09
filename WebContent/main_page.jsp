@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="IPIC welcome and sign in page.">
     <meta name="keywords" content="IIIC, welcome, sign in">
-    <meta name="author" content="Wang huiyan, Song yiping, Si xuemin, Qi ke">
+    <meta name="author" content="">
 
     <link rel="shortcut icon" href="http://getbootstrap.com/docs-assets/ico/favicon.png">
 

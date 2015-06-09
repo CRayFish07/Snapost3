@@ -3,15 +3,14 @@
 <%@ page import="Servlet.*" %>
 <%
 String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+//String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <script language="javascript">
 		function setValue(){
 			document.getElementById("type").value=type;
 
 			}
-		}
-</SCRIPT>
+</script>
 <!DOCTYPE html>
 <html lang="en">
  <head>
