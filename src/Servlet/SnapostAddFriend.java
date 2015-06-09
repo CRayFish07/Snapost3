@@ -134,6 +134,16 @@ public class SnapostAddFriend extends HttpServlet {
 		
 	}
 	
+	/**
+	 * The doPost method of the servlet. <br>
+	 *
+	 * This method is called when a form has its tag value method equals to post.
+	 * 
+	 * @param request the request send by the client to the server
+	 * @param response the response send by the server to the client
+	 * @throws ServletException if an error occurred
+	 * @throws IOException if an error occurred
+	 */
 	/*	int x = 0;
     	while (x){
         	System.out.println("hello, world");

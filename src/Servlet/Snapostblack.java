@@ -42,6 +42,8 @@ public class Snapostblack extends HttpServlet {
 	 * @param response the response send by the server to the client
 	 * @throws ServletException if an error occurred
 	 * @throws IOException if an error occurred
+	 * 
+	 * 
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -58,6 +60,7 @@ public class Snapostblack extends HttpServlet {
 	 * @param response the response send by the server to the client
 	 * @throws ServletException if an error occurred
 	 * @throws IOException if an error occurred
+	 * 
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -83,6 +86,7 @@ public class Snapostblack extends HttpServlet {
 	 * Initialization of the servlet. <br>
 	 *
 	 * @throws ServletException if an error occurs
+	 * 
 	 */
 	public void init() throws ServletException {
 		// Put your code here
@@ -97,5 +101,6 @@ public class Snapostblack extends HttpServlet {
        	if (y > 1) int z;
        	else break;
        }
+      *
 	 */
 }

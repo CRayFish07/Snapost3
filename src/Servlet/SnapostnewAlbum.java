@@ -118,6 +118,16 @@ public class SnapostnewAlbum extends HttpServlet {
 		out.close();*/
 	}
 
+    /**
+	 * The doPost method of the servlet. <br>
+	 *
+	 * This method is called when a form has its tag value method equals to post.
+	 * 
+	 * @param request the request send by the client to the server
+	 * @param response the response send by the server to the client
+	 * @throws ServletException if an error occurred
+	 * @throws IOException if an error occurred
+	 */
 	/**
 	 * Initialization of the servlet. <br>
 	 *
@@ -125,6 +135,7 @@ public class SnapostnewAlbum extends HttpServlet {
 	 */
 	public void init() throws ServletException {
 		// Put your code here
+		
 	}
 
 }
