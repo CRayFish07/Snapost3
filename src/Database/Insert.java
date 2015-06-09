@@ -32,10 +32,12 @@ public class Insert
 		Connection con = null;
 		Statement stmt = null;
 		int rs = 0;
+		
 		String driver = "com.mysql.jdbc.Driver";
 		String url = "jdbc:mysql://localhost:3306/snapost";
 		String user = "root";
 		String passwd = "";
+		
 		try
 		{
 			Class.forName(driver);

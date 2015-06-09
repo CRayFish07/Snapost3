@@ -5,6 +5,22 @@ import java.util.ArrayList;
 
 public class Select
 {
+	
+	/*
+	 * 
+	 * API for Select
+	 * --------PARAMENTERS-------------------------------
+	 * !!NEED!!	String table -- certain table
+	 * 			String selection -- select
+	 * 
+	 * driver = "com.mysql.jdbc.Driver";
+	 * url = "jdbc:mysql://localhost:3306/snapost";
+	 * user = "root";
+	 * passwd = "";
+	 * connect to sql through jdbc
+	 * 
+	 * **/
+
 	public static int SelectAll(String table, ArrayList<String> selection)
 	{
 		int count = 0;
@@ -17,11 +33,26 @@ public class Select
 		String passwd = "";
 		try
 		{
+<<<<<<< HEAD
+			
+			/*
+			 * default way to connect the database server
+			 * connection!
+			 * **/
+
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+			con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;DatabaseName=iPic", "sa", "qinke0704mayday");
+=======
 			Class.forName(driver);
 			con = DriverManager.getConnection(url, user, passwd);
+>>>>>>> branch 'master' of https://github.com/2bdenny/Snapost3.git
 			stmt = con.createStatement();
+			
 			String select = "select * from " + table;
 			System.out.println(select);
+			
+			//excute stmt
+
 			rs = stmt.executeQuery(select);
 			
 			ResultSetMetaData rsMetaData;
@@ -33,10 +64,13 @@ public class Select
 					//System.out.println(rs.getString(i + 1));
 					selection.add(rs.getString(i + 1));
 			}
+			
 			if(rs != null)
 				rs.close();
+			//close stmt
 			if(stmt != null)
 				stmt.close();
+			//close con
 			if(con != null)
 				con.close();
 			//return count;
@@ -52,6 +86,27 @@ public class Select
 	public static int SelectElement(String[] elements, String[] property, 
 			String table, String[] type, String[] restraints, ArrayList<String> selection)
 	{	
+		
+		/*
+		 * 
+		 * API for SelectElement
+		 * --------PARAMENTERS-------------------------------
+		 * !!NEED!!	String[] elements -- elements to be selected
+		 * 			String[] property -- respect property
+		 * 			String table	  -- certain table
+		 * 			String[] type1/2	  -- type either belongs to
+		 * 			String[] restraints -- restraints to be noticed
+		 * 
+		 * 
+		 * driver = "com.mysql.jdbc.Driver";
+		 * url = "jdbc:mysql://localhost:3306/snapost";
+		 * user = "root";
+		 * passwd = "";
+		 * connect to sql through jdbc
+		 * 
+		 * **/
+
+		
 		int count = 0;
 		Connection con = null;
 		Statement stmt = null;
@@ -66,6 +121,7 @@ public class Select
 			Class.forName(driver);
 			con = DriverManager.getConnection(url, user, passwd);
 			stmt = con.createStatement();
+			
 			for(int i = 0; i < elements.length; i++)
 			{
 				if(type[i].equals("char"))
@@ -95,10 +151,13 @@ public class Select
 			}
 			if(rs != null)
 				rs.close();
+			//close stmt
 			if(stmt != null)
 				stmt.close();
+			//close con
 			if(con != null)
 				con.close();
+			
 			return count;
 		}
 		catch(Exception e)
@@ -107,21 +166,50 @@ public class Select
 		}
 		return count;
 	}
+	
+	
+	
 	public static int SelectAllTime(String table, ArrayList<String> selection)
 	{
+		
+		/*
+		 * 
+		 * API for SelectAllTime
+		 * --------PARAMENTERS-------------------------------
+		 * !!NEED!!	String[] elements -- elements to be selected
+		 * 			String[] property -- respect property
+		 * 			String table	  -- certain table
+		 * 			String[] type1/2	  -- type either belongs to
+		 * 			String[] restraints -- restraints to be noticed
+		 * 
+		 * 
+		 * driver = "com.mysql.jdbc.Driver";
+		 * url = "jdbc:mysql://localhost:3306/snapost";
+		 * user = "root";
+		 * passwd = "";
+		 * connect to sql through jdbc
+		 * 
+		 * **/
+
+
 		int count = 0;
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet rs = null;
+<<<<<<< HEAD
+		
+=======
 		String driver = "com.mysql.jdbc.Driver";
 		String url = "jdbc:mysql://localhost:3306/snapost";
 		String user = "root";
 		String passwd = "";
+>>>>>>> branch 'master' of https://github.com/2bdenny/Snapost3.git
 		try
 		{
 			Class.forName(driver);
 			con = DriverManager.getConnection(url, user, passwd);
 			stmt = con.createStatement();
+			
 			String select = "select * from " + table + " order by PHOTO_NAME DESC";
 			System.out.println(select);
 			rs = stmt.executeQuery(select);
@@ -135,10 +223,14 @@ public class Select
 					//System.out.println(rs.getString(i + 1));
 					selection.add(rs.getString(i + 1));
 			}
+			
+			
 			if(rs != null)
 				rs.close();
+			//close stmt
 			if(stmt != null)
 				stmt.close();
+			//close con
 			if(con != null)
 				con.close();
 			//return count;
@@ -152,12 +244,17 @@ public class Select
 	}
 	public static void main(String[] args)
 	{
+		
+		
 		/*String[] elements = {"coco"};
 		String[] property = {"USERNAME"};
 		String table = "ALBUM";
 		String[] type = {"char"};
 		String[] restraints = {"="};*/
+		
+		
 		ArrayList<String> selection = new ArrayList<String>();
+		
 		//int count = Select.SelectElement(elements, property, table, type, restraints, result);
 /*		if(result != null)
 		{
@@ -168,7 +265,10 @@ public class Select
 					System.out.println();
 			}
 		}*/
+		
+		
 		Select.SelectAllTime("PHOTO", selection);
+		
 		//System.out.println("count:"+count+"  "+"result.size:"+result.size());
 	}
 }
