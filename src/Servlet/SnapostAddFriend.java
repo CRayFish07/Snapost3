@@ -132,5 +132,16 @@ public class SnapostAddFriend extends HttpServlet {
 	public void init() throws ServletException {
 		// Put your code here
 	}
+	
+	/**
+	 *
+	 * 	int x = 0;
+    	while (x){
+        	System.out.println("hello, world");
+        	int y = x;
+        	if (y > 1) int z;
+        	else break;
+        }
+	 */
 
 }
