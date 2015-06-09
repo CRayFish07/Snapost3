@@ -87,7 +87,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body data-spy="scroll" data-target=".navbar-example">
 <div class="container">
 <div class="row clearfix">
-	<img src="ad_title5.png" width="100%" height="220px"/>
+	<img src="http://nvidia.njuftp.org/images/f3db0c94-d57c-4b50-b516-412b041dfd71.png" width="100%" height="220px"/>
 	</div>
 	<div class="row clearfix">
 		<div class="col-md-2 column">

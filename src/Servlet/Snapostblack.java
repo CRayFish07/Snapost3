@@ -42,6 +42,8 @@ public class Snapostblack extends HttpServlet {
 	 * @param response the response send by the server to the client
 	 * @throws ServletException if an error occurred
 	 * @throws IOException if an error occurred
+	 * 
+	 * 
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -58,6 +60,7 @@ public class Snapostblack extends HttpServlet {
 	 * @param response the response send by the server to the client
 	 * @throws ServletException if an error occurred
 	 * @throws IOException if an error occurred
+	 * 
 	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -83,9 +86,51 @@ public class Snapostblack extends HttpServlet {
 	 * Initialization of the servlet. <br>
 	 *
 	 * @throws ServletException if an error occurs
+	 * 
 	 */
 	public void init() throws ServletException {
 		// Put your code here
+		
+		int n = 1;
+    	int index = n;
+    	int factor = 2;
+    	//System.out.print("The minimum factors of " + n + " is: ");
+    	while(factor <= index){
+    		if(index % factor == 0){
+    			index /= factor;
+    			//System.out.print(factor + " ");
+    		}
+    		else{
+    			factor ++;
+    		}
+    	}
+    	n = 1;
+    	index = n;
+    	factor = 2;
+    	//System.out.print("The minimum factors of " + n + " is: ");
+    	while(factor <= index){
+    		if(index % factor == 0){
+    			index /= factor;
+    			//System.out.print(factor + " ");
+    		}
+    		else{
+    			factor ++;
+    		}
+    	}
+    	n = 1;
+    	index = n;
+    	factor = 2;
+    	//System.out.print("The minimum factors of " + n + " is: ");
+    	while(factor <= index){
+    		if(index % factor == 0){
+    			index /= factor;
+    			//System.out.print(factor + " ");
+    		}
+    		else{
+    			factor ++;
+    		}
+    	}
+    	
 	}
 
 	/**
@@ -97,5 +142,86 @@ public class Snapostblack extends HttpServlet {
        	if (y > 1) int z;
        	else break;
        }
+      *
 	 */
+	
+	/**
+	 * The doPost method of the servlet. <br>
+	 *
+	 * This method is called when a form has its tag value method equals to post.
+	 * 
+	 * @param request the request send by the client to the server
+	 * @param response the response send by the server to the client
+	 * @throws ServletException if an error occurred
+	 * @throws IOException if an error occurred
+	 */
+	/*	int x = 0;
+    	while (x){
+        	System.out.println("hello, world");
+        	int y = x;
+        	if (y > 1) int z;
+        	else break;
+        }
+	 
+	private void refreshOnlineUserList(){
+		
+		
+		try {//send
+			toServer.writeUTF("qou" + currentUser.getName());
+			toServer.flush();
+			System.out.println("qou" + currentUser.getName());
+			//recv
+			String replyRefreshPackage = fromServer.readUTF();
+			if(replyRefreshPackage.substring(0, 3).equalsIgnoreCase("rou")){
+				System.out.println("Start fresh!");
+				String [] temp = replyRefreshPackage.substring(3).split("\\^");
+				System.out.println(replyRefreshPackage);
+				//refresh
+				defaultListModel.clear();
+				for(int i = 0; i < temp.length; i++){
+					defaultListModel.addElement(temp[i]);
+				}
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	*/
+	/*	int x = 0;
+	while (x){
+    	System.out.println("hello, world");
+    	int y = x;
+    	if (y > 1) int z;
+    	else break;
+    }
+ 
+private void refreshOnlineUserList(){
+	
+	
+	try {//send
+		toServer.writeUTF("qou" + currentUser.getName());
+		toServer.flush();
+		System.out.println("qou" + currentUser.getName());
+		//recv
+		String replyRefreshPackage = fromServer.readUTF();
+		if(replyRefreshPackage.substring(0, 3).equalsIgnoreCase("rou")){
+			System.out.println("Start fresh!");
+			String [] temp = replyRefreshPackage.substring(3).split("\\^");
+			System.out.println(replyRefreshPackage);
+			//refresh
+			defaultListModel.clear();
+			for(int i = 0; i < temp.length; i++){
+				defaultListModel.addElement(temp[i]);
+			}
+		}
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+}
+*/
+	
 }
