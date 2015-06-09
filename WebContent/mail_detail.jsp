@@ -78,7 +78,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    if(request.getParameter("announceId") != null)
 	    {
 		    String[] elements = {request.getParameter("announceId")};
-			String[] property = {"TOD"};
+			String[] property = {"subtime"};
 			String table = "Announce";
 			String[] type = {"char"};
 			String[] restraints = {"="};
