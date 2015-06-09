@@ -202,16 +202,6 @@ public class SnapostLogin extends HttpServlet {
 		// Put your code here
 	}
 	
-	public void get(){
-		int x = 0;
-		int z;
-    	while (x > 0){
-        	//System.out.println("hello, world");
-        	int y = x;
-        	if (y > 1) z = 0;
-        	else break;
-        }
-	}
 	/*
 	public static boolean isInteger(String str) {  
 	    Pattern pattern = Pattern.compile("[0-9]*");  
