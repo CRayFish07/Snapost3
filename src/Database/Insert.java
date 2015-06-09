@@ -6,6 +6,27 @@ import java.sql.Statement;
 
 public class Insert 
 {
+	
+	/*
+	 * 
+	 * API for InsertElement
+	 * --------PARAMENTERS-------------------------------
+	 * !!NEED!!	String[] elements -- elements to delete
+	 * 			String[] property -- respect property
+	 * 			String table	  -- certain table
+	 * 			String[] type	  -- type that belongs to
+	 * 			String[] restraints -- restraints to be noticed
+	 * 
+	 * 
+	 * driver = "com.mysql.jdbc.Driver";
+	 * url = "jdbc:mysql://localhost:3306/snapost";
+	 * user = "root";
+	 * passwd = "";
+	 * connect to sql through jdbc
+	 * 
+	 * **/
+
+
 	public static int InsertAlbum(String[] values)
 	{
 		Connection con = null;
@@ -20,27 +41,27 @@ public class Insert
 			Class.forName(driver);
 			con = DriverManager.getConnection(url, user, passwd);
 			
-			//��������
+			//锟斤拷锟斤拷锟斤拷锟斤拷
 			stmt = con.createStatement();
 			
-			//�õ���Ҫִ�е�ָ��
+			//锟矫碉拷锟斤拷要执锟叫碉拷指锟斤拷
 			String value = "";
 			for(int i = 0; i < values.length; i++)
 				if(i < 4)
-					value = value + "'" + values[i] + "',";		//���ַ����������д���
+					value = value + "'" + values[i] + "',";		//锟斤拷锟街凤拷锟斤拷锟斤拷锟斤拷锟斤拷锟叫达拷锟斤拷
 			value = value + "'" + values[4] + "'" +")";
 			
 			System.out.println(value);
 			
-			//����ָ��
+			//锟斤拷锟斤拷指锟斤拷
 			String insert = "insert into ALBUM values(" + value;
 			System.out.println(insert);
 			
-			//ִ��ָ��
+			//执锟斤拷指锟斤拷
 			rs = stmt.executeUpdate(insert);
 
 			System.out.println(rs);
-			//�ر������ݿ������
+			//锟截憋拷锟斤拷锟斤拷锟捷匡拷锟斤拷锟斤拷锟�
 			if(stmt != null)
 				stmt.close();
 			if(con != null)
@@ -66,27 +87,27 @@ public class Insert
 			Class.forName(driver);
 			con = DriverManager.getConnection(url, user, passwd);
 			
-			//��������
+			//锟斤拷锟斤拷锟斤拷锟斤拷
 			stmt = con.createStatement();
 			
-			//�õ���Ҫִ�е�ָ��
+			//锟矫碉拷锟斤拷要执锟叫碉拷指锟斤拷
 			String value = "";
 			for(int i = 0; i < values.length; i++)
 				if(i < 4)
-					value = value + "'" + values[i] + "',";		//���ַ����������д���
+					value = value + "'" + values[i] + "',";		//锟斤拷锟街凤拷锟斤拷锟斤拷锟斤拷锟斤拷锟叫达拷锟斤拷
 			value = value + "'" + values[4] + "'" +")";
 			
 			System.out.println(value);
 			
-			//����ָ��
+			//锟斤拷锟斤拷指锟斤拷
 			String insert = "insert into PHOTO values(" + value;
 			System.out.println(insert);
 			
-			//ִ��ָ��
+			//执锟斤拷指锟斤拷
 			rs = stmt.executeUpdate(insert);
 
 			System.out.println(rs);
-			//�ر������ݿ������
+			//锟截憋拷锟斤拷锟斤拷锟捷匡拷锟斤拷锟斤拷锟�
 			if(stmt != null)
 				stmt.close();
 			if(con != null)
@@ -112,29 +133,29 @@ public class Insert
 			Class.forName(driver);
 			con = DriverManager.getConnection(url, user, passwd);
 			
-			//��������
+			//锟斤拷锟斤拷锟斤拷锟斤拷
 			stmt = con.createStatement();
 			
-			//�õ���Ҫִ�е�ָ��
+			//锟矫碉拷锟斤拷要执锟叫碉拷指锟斤拷
 			String value = "";
 			for(int i = 0; i < values.length; i++)
 			{
 				if(i < 6)
-					value = value + "'" + values[i] + "',";		//���ַ����������д���
+					value = value + "'" + values[i] + "',";		//锟斤拷锟街凤拷锟斤拷锟斤拷锟斤拷锟斤拷锟叫达拷锟斤拷
 				else
 					value = value + values[i] +")";
 			}
 			System.out.println(value);
 			
-			//����ָ��
+			//锟斤拷锟斤拷指锟斤拷
 			String insert = "insert into Member values(" + value;
 			System.out.println(insert);
 			
-			//ִ��ָ��
+			//执锟斤拷指锟斤拷
 			rs = stmt.executeUpdate(insert);
 
 			System.out.println(rs);
-			//�ر������ݿ������
+			//锟截憋拷锟斤拷锟斤拷锟捷匡拷锟斤拷锟斤拷锟�
 			if(stmt != null)
 				stmt.close();
 			if(con != null)
@@ -200,25 +221,25 @@ public class Insert
 			Class.forName(driver);
 			con = DriverManager.getConnection(url, user, passwd);
 			
-			//��������
+			//锟斤拷锟斤拷锟斤拷锟斤拷
 			stmt = con.createStatement();
 			
-			//�õ���Ҫִ�е�ָ��
+			//锟矫碉拷锟斤拷要执锟叫碉拷指锟斤拷
 			String value = "";
-			value = value + "'" + values[0] + "',";		//���ַ����������д���
+			value = value + "'" + values[0] + "',";		//锟斤拷锟街凤拷锟斤拷锟斤拷锟斤拷锟斤拷锟叫达拷锟斤拷
 			value = value + "'" + values[1] + "',";
 			value = value + "'" + values[2] + "')";
 			System.out.println(value);
 			
-			//����ָ��
+			//锟斤拷锟斤拷指锟斤拷
 			String insert = "insert into Forbidden values(" + value;
 			System.out.println(insert);
 			
-			//ִ��ָ��
+			//执锟斤拷指锟斤拷
 			rs = stmt.executeUpdate(insert);
 
 			System.out.println(rs);
-			//�ر������ݿ������
+			//锟截憋拷锟斤拷锟斤拷锟捷匡拷锟斤拷锟斤拷锟�
 			if(stmt != null)
 				stmt.close();
 			if(con != null)
@@ -282,27 +303,27 @@ public class Insert
 			Class.forName(driver);
 			con = DriverManager.getConnection(url, user, passwd);
 			
-			//��������
+			//锟斤拷锟斤拷锟斤拷锟斤拷
 			stmt = con.createStatement();
 			
-			//�õ���Ҫִ�е�ָ��
+			//锟矫碉拷锟斤拷要执锟叫碉拷指锟斤拷
 			String value = "";
 			for(int i = 0; i < values.length; i++)
 				if(i < 5)
-					value = value + "'" + values[i] + "',";		//���ַ����������д���
+					value = value + "'" + values[i] + "',";		//锟斤拷锟街凤拷锟斤拷锟斤拷锟斤拷锟斤拷锟叫达拷锟斤拷
 			value = value + "'" + values[5] + "'" +")";
 			
 			System.out.println(value);
 			
-			//����ָ��
+			//锟斤拷锟斤拷指锟斤拷
 			String insert = "insert into Share values(" + value;
 			System.out.println(insert);
 			
-			//ִ��ָ��
+			//执锟斤拷指锟斤拷
 			rs = stmt.executeUpdate(insert);
 
 			System.out.println(rs);
-			//�ر������ݿ������
+			//锟截憋拷锟斤拷锟斤拷锟捷匡拷锟斤拷锟斤拷锟�
 			if(stmt != null)
 				stmt.close();
 			if(con != null)
