@@ -12,10 +12,14 @@ public class Update
 		Connection con = null;
 		Statement stmt = null;
 		int rs = 0;
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/snapost";
+		String user = "root";
+		String passwd = "";
 		try
 		{
-			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;DatabaseName=iPic", "sa", "qinke0704mayday");
+			Class.forName(driver);
+			con = DriverManager.getConnection(url, user, passwd);
 			stmt = con.createStatement();
 
 			for(int i = 0; i < elements1.length; i++)

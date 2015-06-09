@@ -79,7 +79,7 @@ public class SnapostLogin extends HttpServlet {
 		ArrayList<String> result2 = new ArrayList<String>();
 		//request.getSession().setAttribute("wrongType","You are fobidden!Cannot log in!");
 		//response.sendRedirect("false.jsp");
-		if(name.equals("admin") && password.equals("admin"))
+		if(name != null && password != null &&name.equals("admin") && password.equals("admin"))
 		{
 			response.sendRedirect("ad_mainpage.jsp");
 		}

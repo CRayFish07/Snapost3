@@ -11,33 +11,36 @@ public class Insert
 		Connection con = null;
 		Statement stmt = null;
 		int rs = 0;
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/snapost";
+		String user = "root";
+		String passwd = "";
 		try
 		{
-			//½¨Á¢Êý¾Ý¿âÁ¬½Ó
-			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;DatabaseName=iPic", "sa", "qinke0704mayday");
+			Class.forName(driver);
+			con = DriverManager.getConnection(url, user, passwd);
 			
-			//´´½¨ÃüÁî
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			stmt = con.createStatement();
 			
-			//µÃµ½ÐèÒªÖ´ÐÐµÄÖ¸Áî
+			//ï¿½Ãµï¿½ï¿½ï¿½ÒªÖ´ï¿½Ðµï¿½Ö¸ï¿½ï¿½
 			String value = "";
 			for(int i = 0; i < values.length; i++)
 				if(i < 4)
-					value = value + "'" + values[i] + "',";		//¶Ô×Ö·û´®²Ù×÷½øÐÐ´¦Àí
+					value = value + "'" + values[i] + "',";		//ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½
 			value = value + "'" + values[4] + "'" +")";
 			
 			System.out.println(value);
 			
-			//Éú³ÉÖ¸Áî
+			//ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½
 			String insert = "insert into ALBUM values(" + value;
 			System.out.println(insert);
 			
-			//Ö´ÐÐÖ¸Áî
+			//Ö´ï¿½ï¿½Ö¸ï¿½ï¿½
 			rs = stmt.executeUpdate(insert);
 
 			System.out.println(rs);
-			//¹Ø±ÕÓëÊý¾Ý¿âµÄÁ¬½Ó
+			//ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			if(stmt != null)
 				stmt.close();
 			if(con != null)
@@ -54,33 +57,36 @@ public class Insert
 		Connection con = null;
 		Statement stmt = null;
 		int rs = 0;
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/snapost";
+		String user = "root";
+		String passwd = "";
 		try
 		{
-			//½¨Á¢Êý¾Ý¿âÁ¬½Ó
-			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;DatabaseName=iPic", "sa", "qinke0704mayday");
+			Class.forName(driver);
+			con = DriverManager.getConnection(url, user, passwd);
 			
-			//´´½¨ÃüÁî
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			stmt = con.createStatement();
 			
-			//µÃµ½ÐèÒªÖ´ÐÐµÄÖ¸Áî
+			//ï¿½Ãµï¿½ï¿½ï¿½ÒªÖ´ï¿½Ðµï¿½Ö¸ï¿½ï¿½
 			String value = "";
 			for(int i = 0; i < values.length; i++)
 				if(i < 4)
-					value = value + "'" + values[i] + "',";		//¶Ô×Ö·û´®²Ù×÷½øÐÐ´¦Àí
+					value = value + "'" + values[i] + "',";		//ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½
 			value = value + "'" + values[4] + "'" +")";
 			
 			System.out.println(value);
 			
-			//Éú³ÉÖ¸Áî
+			//ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½
 			String insert = "insert into Photo values(" + value;
 			System.out.println(insert);
 			
-			//Ö´ÐÐÖ¸Áî
+			//Ö´ï¿½ï¿½Ö¸ï¿½ï¿½
 			rs = stmt.executeUpdate(insert);
 
 			System.out.println(rs);
-			//¹Ø±ÕÓëÊý¾Ý¿âµÄÁ¬½Ó
+			//ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			if(stmt != null)
 				stmt.close();
 			if(con != null)
@@ -97,35 +103,38 @@ public class Insert
 		Connection con = null;
 		Statement stmt = null;
 		int rs = 0;
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/snapost";
+		String user = "root";
+		String passwd = "";
 		try
 		{
-			//½¨Á¢Êý¾Ý¿âÁ¬½Ó
-			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;DatabaseName=iPic", "sa", "qinke0704mayday");
+			Class.forName(driver);
+			con = DriverManager.getConnection(url, user, passwd);
 			
-			//´´½¨ÃüÁî
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			stmt = con.createStatement();
 			
-			//µÃµ½ÐèÒªÖ´ÐÐµÄÖ¸Áî
+			//ï¿½Ãµï¿½ï¿½ï¿½ÒªÖ´ï¿½Ðµï¿½Ö¸ï¿½ï¿½
 			String value = "";
 			for(int i = 0; i < values.length; i++)
 			{
 				if(i < 6)
-					value = value + "'" + values[i] + "',";		//¶Ô×Ö·û´®²Ù×÷½øÐÐ´¦Àí
+					value = value + "'" + values[i] + "',";		//ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½
 				else
 					value = value + values[i] +")";
 			}
 			System.out.println(value);
 			
-			//Éú³ÉÖ¸Áî
+			//ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½
 			String insert = "insert into Member values(" + value;
 			System.out.println(insert);
 			
-			//Ö´ÐÐÖ¸Áî
+			//Ö´ï¿½ï¿½Ö¸ï¿½ï¿½
 			rs = stmt.executeUpdate(insert);
 
 			System.out.println(rs);
-			//¹Ø±ÕÓëÊý¾Ý¿âµÄÁ¬½Ó
+			//ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			if(stmt != null)
 				stmt.close();
 			if(con != null)
@@ -143,10 +152,14 @@ public class Insert
 		Connection con = null;
 		Statement stmt = null;
 		int rs = 0;
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/snapost";
+		String user = "root";
+		String passwd = "";
 		try
 		{
-			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;DatabaseName=iPic", "sa", "qinke0704mayday");
+			Class.forName(driver);
+			con = DriverManager.getConnection(url, user, passwd);
 			stmt = con.createStatement();
 			String value = "";
 			for(int i = 0; i < 3; i++)
@@ -178,31 +191,34 @@ public class Insert
 		Connection con = null;
 		Statement stmt = null;
 		int rs = 0;
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/snapost";
+		String user = "root";
+		String passwd = "";
 		try
 		{
-			//½¨Á¢Êý¾Ý¿âÁ¬½Ó
-			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;DatabaseName=iPic", "sa", "qinke0704mayday");
+			Class.forName(driver);
+			con = DriverManager.getConnection(url, user, passwd);
 			
-			//´´½¨ÃüÁî
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			stmt = con.createStatement();
 			
-			//µÃµ½ÐèÒªÖ´ÐÐµÄÖ¸Áî
+			//ï¿½Ãµï¿½ï¿½ï¿½ÒªÖ´ï¿½Ðµï¿½Ö¸ï¿½ï¿½
 			String value = "";
-			value = value + "'" + values[0] + "',";		//¶Ô×Ö·û´®²Ù×÷½øÐÐ´¦Àí
+			value = value + "'" + values[0] + "',";		//ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½
 			value = value + "'" + values[1] + "',";
 			value = value + "'" + values[2] + "')";
 			System.out.println(value);
 			
-			//Éú³ÉÖ¸Áî
+			//ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½
 			String insert = "insert into Forbidden values(" + value;
 			System.out.println(insert);
 			
-			//Ö´ÐÐÖ¸Áî
+			//Ö´ï¿½ï¿½Ö¸ï¿½ï¿½
 			rs = stmt.executeUpdate(insert);
 
 			System.out.println(rs);
-			//¹Ø±ÕÓëÊý¾Ý¿âµÄÁ¬½Ó
+			//ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			if(stmt != null)
 				stmt.close();
 			if(con != null)
@@ -220,10 +236,14 @@ public class Insert
 		Connection con = null;
 		Statement stmt = null;
 		int rs = 0;
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/snapost";
+		String user = "root";
+		String passwd = "";
 		try
 		{
-			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;DatabaseName=iPic", "sa", "qinke0704mayday");
+			Class.forName(driver);
+			con = DriverManager.getConnection(url, user, passwd);
 			stmt = con.createStatement();
 			String value = "";
 			value = value + "'" + values + "')";
@@ -253,33 +273,36 @@ public class Insert
 		Connection con = null;
 		Statement stmt = null;
 		int rs = 0;
+		String driver = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/snapost";
+		String user = "root";
+		String passwd = "";
 		try
 		{
-			//½¨Á¢Êý¾Ý¿âÁ¬½Ó
-			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-			con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;DatabaseName=iPic", "sa", "qinke0704mayday");
+			Class.forName(driver);
+			con = DriverManager.getConnection(url, user, passwd);
 			
-			//´´½¨ÃüÁî
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			stmt = con.createStatement();
 			
-			//µÃµ½ÐèÒªÖ´ÐÐµÄÖ¸Áî
+			//ï¿½Ãµï¿½ï¿½ï¿½ÒªÖ´ï¿½Ðµï¿½Ö¸ï¿½ï¿½
 			String value = "";
 			for(int i = 0; i < values.length; i++)
 				if(i < 5)
-					value = value + "'" + values[i] + "',";		//¶Ô×Ö·û´®²Ù×÷½øÐÐ´¦Àí
+					value = value + "'" + values[i] + "',";		//ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½
 			value = value + "'" + values[5] + "'" +")";
 			
 			System.out.println(value);
 			
-			//Éú³ÉÖ¸Áî
+			//ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½
 			String insert = "insert into Share values(" + value;
 			System.out.println(insert);
 			
-			//Ö´ÐÐÖ¸Áî
+			//Ö´ï¿½ï¿½Ö¸ï¿½ï¿½
 			rs = stmt.executeUpdate(insert);
 
 			System.out.println(rs);
-			//¹Ø±ÕÓëÊý¾Ý¿âµÄÁ¬½Ó
+			//ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			if(stmt != null)
 				stmt.close();
 			if(con != null)
