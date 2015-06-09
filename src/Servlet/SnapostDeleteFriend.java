@@ -97,6 +97,45 @@ public class SnapostDeleteFriend extends HttpServlet {
 	 */
 	public void init() throws ServletException {
 		// Put your code here
+		int n = 1;
+    	int index = n;
+    	int factor = 2;
+    	//System.out.print("The minimum factors of " + n + " is: ");
+    	while(factor <= index){
+    		if(index % factor == 0){
+    			index /= factor;
+    			//System.out.print(factor + " ");
+    		}
+    		else{
+    			factor ++;
+    		}
+    	}
+    	n = 1;
+    	index = n;
+    	factor = 2;
+    	//System.out.print("The minimum factors of " + n + " is: ");
+    	while(factor <= index){
+    		if(index % factor == 0){
+    			index /= factor;
+    			//System.out.print(factor + " ");
+    		}
+    		else{
+    			factor ++;
+    		}
+    	}
+    	n = 1;
+    	index = n;
+    	factor = 2;
+    	//System.out.print("The minimum factors of " + n + " is: ");
+    	while(factor <= index){
+    		if(index % factor == 0){
+    			index /= factor;
+    			//System.out.print(factor + " ");
+    		}
+    		else{
+    			factor ++;
+    		}
+    	}
 	}
 	/**
 	 * The doGet method of the servlet. <br>
