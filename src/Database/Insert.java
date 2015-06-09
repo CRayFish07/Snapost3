@@ -268,7 +268,7 @@ public class Insert
 			stmt = con.createStatement();
 			String value = "";
 			value = value + "'" + values + "')";
-
+			System.out.println(table);
 			System.out.println(value);
 			
 			String insert = "insert into " + table + " values(" + value;

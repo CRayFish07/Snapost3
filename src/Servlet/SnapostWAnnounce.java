@@ -83,6 +83,7 @@ public class SnapostWAnnounce extends HttpServlet {
 		String content = request.getParameter("input_content");
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd/HH:mm:ss");
 		String date=sdf.format(new Date());
+		date = date.substring(0, 10);
 		
 		String[] values = new String[4];
 		values[0]= name;
