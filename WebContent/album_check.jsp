@@ -155,7 +155,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<a href="pic_list.jsp?globalalbumname=<%=albumname1 %>">Open</a>
 							</td>
  							<td> 
-								<a href="./deleteAlbum?globalalbumname=<%=albumname1%>" method = post>Delete</a> 
+								<a href="./SnapostdeleteAlbum?globalalbumname=<%=albumname1%>" method = post>Delete</a> 
 							</td> 
 						</tr>
 										
@@ -182,7 +182,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</h4>
 						</div>
 						<div class="modal-body">
-						<form action="newAlbum" method="post" role="form" name="add_album">
+						<form action="SnapostnewAlbum" method="post" role="form" name="add_album">
 							<div class="form-group">
 								 <label for="input_albumname" class="col-sm-5 control-label">Enter the name:</label>
 									<div class="col-sm-10">
@@ -225,7 +225,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</h4>
 						</div>
 						<div class="modal-body">
-						<form action="newUpload" enctype="multipart/form-data" method="post" role="form" name="add_picture">
+						<form action="SnapostnewUpload" enctype="multipart/form-data" method="post" role="form" name="add_picture">
 							<div class="form-group">
 								 <label >Choose the album</label>
 								 <select name="albumlist" onchange="select()">

@@ -78,7 +78,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="col-md-8 column">
 			<div>
 						<p>
-							<form name = "set" action = "Setting" method = "post" class="form-horizontal" role="form">
+							<form name = "set" action = "SnapotSetting" method = "post" class="form-horizontal" role="form">
 							 <%
 							  	String[] elements = {name};
 								String[] property = {"MNAME"};

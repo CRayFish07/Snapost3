@@ -176,7 +176,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</h4>
 						</div>
 						<div class="modal-body">
-						<form action="newUpload" enctype="multipart/form-data" method="post" role="form" name="add_picture">
+						<form action="SnapostnewUpload" enctype="multipart/form-data" method="post" role="form" name="add_picture">
 							<div class="form-group">
 								 <label >Choose the album</label>
 								 <select name="albumlist" onchange="select()">

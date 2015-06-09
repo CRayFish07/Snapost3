@@ -60,7 +60,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 		<div class="col-md-8 column">
 		<br><br>
-			<form name = "announce" action = WAnnounce method = "post" class="form-horizontal" role="form">
+			<form name = "announce" action = "SnapostWAnnounce" method = "post" class="form-horizontal" role="form">
 			<div class="form-group">
 					 <label for="inputID1" class="col-sm-2 control-label">From:</label>	
 				<div class="col-sm-10">

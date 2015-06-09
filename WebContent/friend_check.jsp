@@ -122,7 +122,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					    	if(mark == 0)
 					    		out.print("<td>1</td>");
 					    	%>
-					    	<form action="DeleteFriend" method = "post" name = "">
+					    	<form action="SnapostDeleteFriend" method = "post" name = "">
 					    	<td>
 						    	<input type = "hidden" name="friendName" value = "<%=selection.get(0) %>">
 						    	<input type = "submit" value="Delete"  name="msg_delete" onClick = "return check();">
@@ -173,7 +173,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</h4>
 						</div>
 						<div class="modal-body">
-						<form name = "add" action = "AddFriend" method = "post" role="form" name="add_friend">
+						<form name = "add" action = "SnapostAddFriend" method = "post" role="form" name="add_friend">
 							<div class="form-group">
 								 <label for="inputID1" class="col-sm-2 control-label">Enter the ID/User name</label>
 									<div class="col-sm-10">

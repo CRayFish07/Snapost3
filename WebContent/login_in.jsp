@@ -103,7 +103,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div class="tab-content">
 					<div class="tab-pane active" id="panel-38686">
 						<p>
-							<form name = "f1" action = "Login" method = "post" class="form-horizontal" role="form">
+							<form name = "f1" action = "SnapostLogin" method = "post" class="form-horizontal" role="form">
 								<div class="form-group">
 									 <label for="inputID1" class="col-sm-2 control-label">User name</label>
 									<div class="col-sm-10">
@@ -134,7 +134,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</div>
 					<div class="tab-pane" id="panel-880039">
 						<p>
-							<form name = "form" action = "newRegister" method = "post" class="form-horizontal" role="form">
+							<form name = "form" action = "SnapostnewRegister" method = "post" class="form-horizontal" role="form">
 								<div class="form-group">
 									 <label for="inputname2" class="col-sm-2 control-label">User name</label>
 									<div class="col-sm-10">

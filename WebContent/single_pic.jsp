@@ -151,7 +151,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			
  			<a href="./saveNewPic?globalalbumname=<%=albumname %>&globalphotoname=<%=photoname %>" class="btn btn-danger btn-block btn-lg" type="button">Save the Change</a>
 
-			<form action="deletePhoto"  method="post" role="form" name="delete_picture">
+			<form action="SnapostdeletePhoto"  method="post" role="form" name="delete_picture">
  				<input type="hidden" name="galbumname" value=<%=albumname %>> 
  				<input type="hidden" name="gphotoname" value=<%=photoname %>> 
  				<input type="hidden" name="goriginphoto" value=<%=originphotoname %>>

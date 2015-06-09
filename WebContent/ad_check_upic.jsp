@@ -108,7 +108,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</h4>
 						</div>
 						<div class="modal-body">
-						<form role="form" name="add_friend" action = "WarnUser" method = "post">
+						<form role="form" name="add_friend" action = "SnapostWarnUser" method = "post">
 							<div class="form-group">
 								 <label for="inputID1" class="col-sm-2 control-label">User name:<%=result.get(0) %></label>
 							</div>
@@ -132,7 +132,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							</h4>
 						</div>
 						<div class="modal-body">
-						<form role="form" name="add_friend" action = "CloseUser" method = "post">
+						<form role="form" name="add_friend" action = "SnapostCloseUser" method = "post">
 							<div class="form-group">
 								 <label for="inputID1" class="col-sm-8 control-label">User name:<%=result.get(0) %><br></label>
 									<label for="inputLevel1" class="col-sm-8 control-label">Choose the closure time</label>

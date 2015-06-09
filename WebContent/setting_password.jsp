@@ -78,7 +78,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<div class="col-md-8 column">
 			<div>
 						<p>
-							<form name = "set" action = "Password" method = "post"  role="form">
+							<form name = "set" action = "SnapostPassword" method = "post"  role="form">
 								<div class="form-group">
 									<label for="inputPassword2" class="col-sm-4 control-label">Old Password </label>
 										<div class="col-sm-10">

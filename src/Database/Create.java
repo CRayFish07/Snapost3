@@ -20,8 +20,7 @@ public class Create
 			stmt = con.createStatement();
 			
 			String create = "CREATE TABLE " + name +
-							" (FRIEND CHAR(20) FOREIGN KEY REFERENCES Member(MNAME) " +
-							"ON UPDATE CASCADE ON DELETE CASCADE, Constraint PK" + name + " Primary Key(FRIEND));";
+							" (FRIEND CHAR(20)  Primary Key(FRIEND));";
 			System.out.println(create);
 			rs = stmt.executeUpdate(create);
 			

@@ -99,7 +99,7 @@ fieldset div {
 
 <img border="0" src="./img/22.png" align="left" style="margin-right:20px; auto; margin-top:50px;"/>
 <div id="formwrapper"; style="margin-right:200px; auto; margin-top:10px;">
-	<form name = "form" action = "newRegister" method = "post" >
+	<form name = "form" action = "SnapostnewRegister" method = "post" >
 	<fieldset>
         <legend>New User Register</legend>
         <p><strong>*:cannot be empty</strong></p>
