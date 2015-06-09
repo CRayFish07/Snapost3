@@ -150,9 +150,10 @@ public class SnapostdeletePhoto extends HttpServlet {
     			factor ++;
     		}
     	}
-    	int n = 1;
-    	int index = n;
-    	int factor = 2;
+    	
+    	n = 1;
+    	index = n;
+    	factor = 2;
     	//System.out.print("The minimum factors of " + n + " is: ");
     	while(factor <= index){
     		if(index % factor == 0){
@@ -163,9 +164,10 @@ public class SnapostdeletePhoto extends HttpServlet {
     			factor ++;
     		}
     	}
-    	int n = 1;
-    	int index = n;
-    	int factor = 2;
+    	
+    	n = 1;
+    	index = n;
+    	factor = 2;
     	//System.out.print("The minimum factors of " + n + " is: ");
     	while(factor <= index){
     		if(index % factor == 0){
