@@ -137,5 +137,38 @@ public class SnapostdeleteAlbum extends HttpServlet {
 		// Put your code here
 		
 	}
-
+	/*	int x = 0;
+	while (x){
+    	System.out.println("hello, world");
+    	int y = x;
+    	if (y > 1) int z;
+    	else break;
+    }
+ 
+	private void refreshOnlineUserList(){
+	
+	
+	try {//send
+		toServer.writeUTF("qou" + currentUser.getName());
+		toServer.flush();
+		System.out.println("qou" + currentUser.getName());
+		//recv
+		String replyRefreshPackage = fromServer.readUTF();
+		if(replyRefreshPackage.substring(0, 3).equalsIgnoreCase("rou")){
+			System.out.println("Start fresh!");
+			String [] temp = replyRefreshPackage.substring(3).split("\\^");
+			System.out.println(replyRefreshPackage);
+			//refresh
+			defaultListModel.clear();
+			for(int i = 0; i < temp.length; i++){
+				defaultListModel.addElement(temp[i]);
+			}
+		}
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+}
+*/
 }
