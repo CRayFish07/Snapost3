@@ -36,7 +36,7 @@ public class Drop
    
 	public static void main(String[] args) 
 	{
-		String friend = "GOOD FRIEND";
+		String friend = "∫√”—";
 		Drop.DropTable(friend);
 	}
 }

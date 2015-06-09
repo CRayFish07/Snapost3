@@ -13,30 +13,31 @@ public class Insert
 		int rs = 0;
 		try
 		{
+			//建立数据库连接
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;DatabaseName=iPic", "sa", "qinke0704mayday");
 			
-
+			//创建命令
 			stmt = con.createStatement();
 			
-
+			//得到需要执行的指令
 			String value = "";
 			for(int i = 0; i < values.length; i++)
 				if(i < 4)
-					value = value + "'" + values[i] + "',";		
+					value = value + "'" + values[i] + "',";		//对字符串操作进行处理
 			value = value + "'" + values[4] + "'" +")";
 			
 			System.out.println(value);
 			
-			//
+			//生成指令
 			String insert = "insert into ALBUM values(" + value;
 			System.out.println(insert);
 			
-			//
+			//执行指令
 			rs = stmt.executeUpdate(insert);
 
 			System.out.println(rs);
-			//
+			//关闭与数据库的连接
 			if(stmt != null)
 				stmt.close();
 			if(con != null)
@@ -55,31 +56,31 @@ public class Insert
 		int rs = 0;
 		try
 		{
-			//
+			//建立数据库连接
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;DatabaseName=iPic", "sa", "qinke0704mayday");
 			
-			//
+			//创建命令
 			stmt = con.createStatement();
 			
-			//
+			//得到需要执行的指令
 			String value = "";
 			for(int i = 0; i < values.length; i++)
 				if(i < 4)
-					value = value + "'" + values[i] + "',";		//
+					value = value + "'" + values[i] + "',";		//对字符串操作进行处理
 			value = value + "'" + values[4] + "'" +")";
 			
 			System.out.println(value);
 			
-			//
+			//生成指令
 			String insert = "insert into Photo values(" + value;
 			System.out.println(insert);
 			
-			//
+			//执行指令
 			rs = stmt.executeUpdate(insert);
 
 			System.out.println(rs);
-			//
+			//关闭与数据库的连接
 			if(stmt != null)
 				stmt.close();
 			if(con != null)
@@ -98,33 +99,33 @@ public class Insert
 		int rs = 0;
 		try
 		{
-			//
+			//建立数据库连接
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;DatabaseName=iPic", "sa", "qinke0704mayday");
 			
-			//
+			//创建命令
 			stmt = con.createStatement();
 			
-			//
+			//得到需要执行的指令
 			String value = "";
 			for(int i = 0; i < values.length; i++)
 			{
 				if(i < 6)
-					value = value + "'" + values[i] + "',";		//
+					value = value + "'" + values[i] + "',";		//对字符串操作进行处理
 				else
 					value = value + values[i] +")";
 			}
 			System.out.println(value);
 			
-			//
+			//生成指令
 			String insert = "insert into Member values(" + value;
 			System.out.println(insert);
 			
-			//
+			//执行指令
 			rs = stmt.executeUpdate(insert);
 
 			System.out.println(rs);
-			//
+			//关闭与数据库的连接
 			if(stmt != null)
 				stmt.close();
 			if(con != null)
@@ -179,29 +180,29 @@ public class Insert
 		int rs = 0;
 		try
 		{
-			//
+			//建立数据库连接
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;DatabaseName=iPic", "sa", "qinke0704mayday");
 			
-			//
+			//创建命令
 			stmt = con.createStatement();
 			
-			//
+			//得到需要执行的指令
 			String value = "";
-			value = value + "'" + values[0] + "',";		
+			value = value + "'" + values[0] + "',";		//对字符串操作进行处理
 			value = value + "'" + values[1] + "',";
 			value = value + "'" + values[2] + "')";
 			System.out.println(value);
 			
-			//
+			//生成指令
 			String insert = "insert into Forbidden values(" + value;
 			System.out.println(insert);
 			
-			//
+			//执行指令
 			rs = stmt.executeUpdate(insert);
 
 			System.out.println(rs);
-			//
+			//关闭与数据库的连接
 			if(stmt != null)
 				stmt.close();
 			if(con != null)
@@ -254,31 +255,31 @@ public class Insert
 		int rs = 0;
 		try
 		{
-			//
+			//建立数据库连接
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			con = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;DatabaseName=iPic", "sa", "qinke0704mayday");
 			
-			//
+			//创建命令
 			stmt = con.createStatement();
 			
-			//
+			//得到需要执行的指令
 			String value = "";
 			for(int i = 0; i < values.length; i++)
 				if(i < 5)
-					value = value + "'" + values[i] + "',";		//
+					value = value + "'" + values[i] + "',";		//对字符串操作进行处理
 			value = value + "'" + values[5] + "'" +")";
 			
 			System.out.println(value);
 			
-			//
+			//生成指令
 			String insert = "insert into Share values(" + value;
 			System.out.println(insert);
 			
-			//
+			//执行指令
 			rs = stmt.executeUpdate(insert);
 
 			System.out.println(rs);
-			//
+			//关闭与数据库的连接
 			if(stmt != null)
 				stmt.close();
 			if(con != null)

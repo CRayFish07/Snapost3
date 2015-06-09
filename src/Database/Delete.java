@@ -48,7 +48,7 @@ public class Delete
 	
 	public static void main(String[] args)
 	{
-		String[] elements = {"ZHANG SAN"};
+		String[] elements = {"уехЩ"};
 		String[] property = {"MNAME"};
 		String table = "Member";
 		String[] type = {"char"};
