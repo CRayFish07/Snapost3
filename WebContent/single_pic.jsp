@@ -101,14 +101,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<img  width="600px" src="../Snapost3/upload/<%=photoname%>" class="img-thumbnail" align="left" height="600px"/>
 				</div>
 				<div class="col-md-2 column">
-					 <a href="./picProcess?picNum=<%="1" %>&globalalbumname=<%=albumname %>&originphotoname=<%=originphotoname %>" class="btn btn-info btn-sm" type="button">BlackAndWhite</a>
-					 <a href="./picProcess?picNum=<%="2" %>&globalalbumname=<%=albumname %>&originphotoname=<%=originphotoname %>" class="btn btn-warning btn-sm " type="button">Slope</a> 
-					 <a href="./picProcess?picNum=<%="3" %>&globalalbumname=<%=albumname %>&originphotoname=<%=originphotoname %>" class="btn btn-sm btn-success" type="button">Center</a>
-					 <a href="./picProcess?picNum=<%="4" %>&globalalbumname=<%=albumname %>&originphotoname=<%=originphotoname %>" class="btn btn-danger btn-sm " type="button">Image</a>
+					 <a href="./SnapostpicProcess?picNum=<%="1" %>&globalalbumname=<%=albumname %>&originphotoname=<%=originphotoname %>" class="btn btn-info btn-sm" type="button">BlackAndWhite</a>
+					 <a href="./SnapostpicProcess?picNum=<%="2" %>&globalalbumname=<%=albumname %>&originphotoname=<%=originphotoname %>" class="btn btn-warning btn-sm " type="button">Slope</a> 
+					 <a href="./SnapostpicProcess?picNum=<%="3" %>&globalalbumname=<%=albumname %>&originphotoname=<%=originphotoname %>" class="btn btn-sm btn-success" type="button">Center</a>
+					 <a href="./SnapostpicProcess?picNum=<%="4" %>&globalalbumname=<%=albumname %>&originphotoname=<%=originphotoname %>" class="btn btn-danger btn-sm " type="button">Image</a>
 					 
-					 <a href="./picProcess?picNum=<%="5" %>&globalalbumname=<%=albumname %>&originphotoname=<%=originphotoname %>" class="btn btn-warning btn-sm " type="button">Diagram</a> 
-					 <a href="./picProcess?picNum=<%="6" %>&globalalbumname=<%=albumname %>&originphotoname=<%=originphotoname %>" class="btn btn-sm btn-success" type="button">RotateLeft</a>
-					 <a href="./picProcess?picNum=<%="7" %>&globalalbumname=<%=albumname %>&originphotoname=<%=originphotoname %>" class="btn btn-danger btn-sm " type="button">RotateRight</a>
+					 <a href="./SnapostpicProcess?picNum=<%="5" %>&globalalbumname=<%=albumname %>&originphotoname=<%=originphotoname %>" class="btn btn-warning btn-sm " type="button">Diagram</a> 
+					 <a href="./SnapostpicProcess?picNum=<%="6" %>&globalalbumname=<%=albumname %>&originphotoname=<%=originphotoname %>" class="btn btn-sm btn-success" type="button">RotateLeft</a>
+					 <a href="./SnapostpicProcess?picNum=<%="7" %>&globalalbumname=<%=albumname %>&originphotoname=<%=originphotoname %>" class="btn btn-danger btn-sm " type="button">RotateRight</a>
 				
 				</div>
 			</div>
@@ -149,7 +149,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</head>			
 
 			
- 			<a href="./saveNewPic?globalalbumname=<%=albumname %>&globalphotoname=<%=photoname %>" class="btn btn-danger btn-block btn-lg" type="button">Save the Change</a>
+ 			<a href="./SnapostsaveNewPic?globalalbumname=<%=albumname %>&globalphotoname=<%=photoname %>" class="btn btn-danger btn-block btn-lg" type="button">Save the Change</a>
 
 			<form action="SnapostdeletePhoto"  method="post" role="form" name="delete_picture">
  				<input type="hidden" name="galbumname" value=<%=albumname %>> 

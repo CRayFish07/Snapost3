@@ -20,7 +20,7 @@ public class Create
 			stmt = con.createStatement();
 			
 			String create = "CREATE TABLE " + name +
-							" (FRIEND CHAR(20)  Primary Key(FRIEND));";
+							" (FRIEND CHAR(20));";
 			System.out.println(create);
 			rs = stmt.executeUpdate(create);
 			

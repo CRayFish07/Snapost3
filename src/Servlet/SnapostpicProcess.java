@@ -83,6 +83,7 @@ public class SnapostpicProcess extends HttpServlet {
             String path = sctx.getRealPath("upload");  
             //����ļ���  
 
+            path = request.getSession().getServletContext().getRealPath("/upload");
             String albumname = request.getParameter("globalalbumname");
             String originphotoname = request.getParameter("originphotoname");
             System.out.println("origin:"+originphotoname);
