@@ -7,24 +7,25 @@ import java.sql.Statement;
 public class Update 
 {
 	
-	/*
-	 * 
-	 * API for Update
-	 * --------PARAMENTERS-------------------------------
-	 * !!NEED!!	String[] elements1/2 -- elements1 to be replaced by element2
-	 * 			String[] property1/2 -- respect property both
-	 * 			String table	  -- certain table
-	 * 			String[] type1/2	  -- type either belongs to
-	 * 			String[] restraints -- restraints to be noticed
-	 * 
-	 * 
-	 * driver = "com.mysql.jdbc.Driver";
+	
+	/**
+     * API for Update
+     * @param elements1/2 -- elements1 to be replaced by element2
+     * @param String[] property1/2 -- respect property both
+     * @param table	  -- certain table
+     * @param type1/2	  -- type either belongs to
+     * @param restraints -- restraints to be noticed
+     * 
+     * 
+     * driver = "com.mysql.jdbc.Driver";
 	 * url = "jdbc:mysql://localhost:3306/snapost";
 	 * user = "root";
 	 * passwd = "";
 	 * connect to sql through jdbc
 	 * 
-	 * **/
+
+     */
+
 
 
 	public static int UpdateElement(String[] elements1, String[] property1, 

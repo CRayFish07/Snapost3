@@ -6,19 +6,26 @@ import java.sql.Statement;
 
 public class Drop
 {
-	
-	/*
-	 * 
-	 * API for droping table
-	 * !!NEED!!	String name--tablename
-	 * 
-	 * driver = "com.mysql.jdbc.Driver";
+		
+	/**
+     * API for droping table
+     * @param elements1/2 -- elements1 to be replaced by element2
+     * @param String[] property1/2 -- respect property both
+     * @param table	  -- certain table
+     * @param type1/2	  -- type either belongs to
+     * @param restraints -- restraints to be noticed
+     * 
+     * 
+     * driver = "com.mysql.jdbc.Driver";
 	 * url = "jdbc:mysql://localhost:3306/snapost";
 	 * user = "root";
 	 * passwd = "";
 	 * connect to sql through jdbc
 	 * 
-	 * **/
+
+     */
+
+
 	public static void DropTable(String name)
 	{
 		Connection con = null;
