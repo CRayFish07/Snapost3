@@ -43,13 +43,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body data-spy="scroll" data-target=".navbar-example">
 <div class="container">
 	<div class="row clearfix">
-	<img src="ad_title5.png" width="100%" height="220px"/>
+	<img src="http://nvidia.njuftp.org/images/f3db0c94-d57c-4b50-b516-412b041dfd71.png" width="100%" height="220px"/>
 	</div>
 	<%ArrayList<String> result = new ArrayList<String>();
     if(request.getParameter("announceId") != null)
     {
 	    String[] elements = {request.getParameter("announceId")};
-		String[] property = {"TOD"};
+		String[] property = {"subtime"};
 		String table = "Announce";
 		String[] type = {"char"};
 		String[] restraints = {"="};

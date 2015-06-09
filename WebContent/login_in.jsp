@@ -16,7 +16,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="IPIC welcome and sign in page.">
     <meta name="keywords" content="IIIC, welcome, sign in">
-    <meta name="author" content="Wang huiyan, Song yiping, Si xuemin, Qi ke">
+    <meta name="author" content="">
 
     <link rel="shortcut icon" href="http://getbootstrap.com/docs-assets/ico/favicon.png">
 
@@ -56,38 +56,38 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</ol>
 				<div class="carousel-inner">
 					<div class="item active">
-						<img alt="" src="http://lorempixel.com/1600/500/sports/1">
+						<img alt="" src="http://nvidia.njuftp.org/images/c25f52f4-fc13-4f73-b548-c6fe3ea015be.png">
 						<div class="carousel-caption">
 							<h4>
-								First
+								第一步
 							</h4>
-							<p>Le vrai bonheur serait de se souvenir du présent.</p>
+							<p>注册</p>
 						</div>
 					</div>
 					<div class="item">
-						<img alt="" src="http://lorempixel.com/1600/500/sports/2">
+						<img alt="" src="http://nvidia.njuftp.org/images/0fc01104-13eb-4c87-8764-b7f6c165aad8.jpg">
 						<div class="carousel-caption">
 							<h4>
-								Second
+								第二步
 							</h4>
-							<p>Le vrai bonheur serait de se souvenir du présent.</p>
+							<p>登录</p>
 						</div>
 					</div>
 					<div class="item">
-						<img alt="" src="http://lorempixel.com/1600/500/sports/3">
+						<img alt="" src="http://nvidia.njuftp.org/images/bc2ace4c-dc8f-41d8-930e-15e7f5d305ef.jpg">
 						<div class="carousel-caption">
 							<h4>
-								Third 
+								第三步
 							</h4>
-							<p>Le vrai bonheur serait de se souvenir du présent.</p>
+							<p>愉快地玩耍</p>
 						</div>
 					</div>
 				</div> <a class="left carousel-control" href="#carousel-271150" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-271150" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 			</div>
 			<div class="page-header">
 				<h1>
-					IPIC<br>
-					<small><font class=2>Le vrai bonheur serait de se souvenir du présent.</font></small>
+					Snapost<br>
+					<small><font class=2>欢迎光临，小伙伴们～</font></small>
 				</h1>
 			</div>
 			
@@ -119,7 +119,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<div class="form-group">
 									<div class="col-sm-offset-2 col-sm-10">
 										<div class="checkbox">
-											 <label><input type="checkbox"> Remember me????</label>
+											 <label><input type="checkbox"> Remember me</label>
 										</div>
 									</div>
 								</div>

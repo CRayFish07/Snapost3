@@ -48,19 +48,20 @@ public class SnapostSetting extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
-		out.println("<HTML>");
-		out.println("  <HEAD><TITLE>A Servlet</TITLE></HEAD>");
-		out.println("  <BODY>");
-		out.print("    This is ");
-		out.print(this.getClass());
-		out.println(", using the GET method");
-		out.println("  </BODY>");
-		out.println("</HTML>");
-		out.flush();
-		out.close();
+		doPost(request, response);
+//		response.setContentType("text/html");
+//		PrintWriter out = response.getWriter();
+//		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");
+//		out.println("<HTML>");
+//		out.println("  <HEAD><TITLE>A Servlet</TITLE></HEAD>");
+//		out.println("  <BODY>");
+//		out.print("    This is ");
+//		out.print(this.getClass());
+//		out.println(", using the GET method");
+//		out.println("  </BODY>");
+//		out.println("</HTML>");
+//		out.flush();
+//		out.close();
 	}
 
 	/**
@@ -81,20 +82,21 @@ public class SnapostSetting extends HttpServlet {
 		values[1] = request.getParameter("inputPassword2");
 		values[2] = request.getParameter("inputsex2");
 		values[3] = request.getParameter("inputbirth2");
+		values[3] = values[3].substring(0, 9);
 		values[4] = request.getParameter("inputEmail2");
 		values[5] = request.getParameter("inputSig2");
 		
-		String[] property1 = {"MNAME", "MPASSWORD", "MSEX", "MBIRTH", "MEMAIL", "MINTRO"};
+		String[] property1 = {"mname", "mpassword", "sex", "birthday", "email", "signature"};
 		String t = "Member";
 		String[] type1 = {"char", "char", "char", "char", "char", "char"};
 		String[] r = {"="};
 		String[] elements2 = {request.getSession().getAttribute("name").toString()};
-		String[] property2 = {"MNAME"};
+		String[] property2 = {"mname"};
 		String[] type2 = {"char"};
 		
 		String name2 = request.getParameter("inputname2");
 		String[] elements = {name2};
-		String[] property = {"MNAME"};
+		String[] property = {"mname"};
 		String table = "Member";
 		String[] type = {"char"};
 		String[] restraints = {"="};
