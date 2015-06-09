@@ -6,20 +6,22 @@ import java.util.ArrayList;
 public class Select
 {
 	
-	/*
-	 * 
-	 * API for Select
-	 * --------PARAMENTERS-------------------------------
-	 * !!NEED!!	String table -- certain table
-	 * 			String selection -- select
-	 * 
-	 * driver = "com.mysql.jdbc.Driver";
+
+	/**
+     * API for Select
+
+     * @param table	  -- certain table
+     * @param String selection -- select
+     * 
+     * 
+     * driver = "com.mysql.jdbc.Driver";
 	 * url = "jdbc:mysql://localhost:3306/snapost";
 	 * user = "root";
 	 * passwd = "";
 	 * connect to sql through jdbc
 	 * 
-	 * **/
+
+     */
 
 	public static int SelectAll(String table, ArrayList<String> selection)
 	{
@@ -27,10 +29,14 @@ public class Select
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet rs = null;
+		
+		
 		String driver = "com.mysql.jdbc.Driver";
 		String url = "jdbc:mysql://localhost:3306/snapost";
 		String user = "root";
 		String passwd = "";
+		
+		
 		try
 		{
 			Class.forName(driver);
@@ -64,6 +70,8 @@ public class Select
 				con.close();
 			//return count;
 		}
+		
+		
 		catch(Exception e)
 		{
 			e.printStackTrace();
@@ -72,29 +80,30 @@ public class Select
 		return count;
 	}
 
+	
+	/**
+     * API for SelectElement
+     * @param elements -- elements to be selected
+     * @param property -- respect property
+     * @param type1	  -- type that belongs to
+     * @param table	  -- certain table
+     * @param restraints -- restraints to be noticed
+     * 
+     * 
+     * 
+     * driver = "com.mysql.jdbc.Driver";
+	 * url = "jdbc:mysql://localhost:3306/snapost";
+	 * user = "root";
+	 * passwd = "";
+	 * connect to sql through jdbc
+	 * 
+
+     */
+
+	
 	public static int SelectElement(String[] elements, String[] property, 
 			String table, String[] type, String[] restraints, ArrayList<String> selection)
 	{	
-		
-		/*
-		 * 
-		 * API for SelectElement
-		 * --------PARAMENTERS-------------------------------
-		 * !!NEED!!	String[] elements -- elements to be selected
-		 * 			String[] property -- respect property
-		 * 			String table	  -- certain table
-		 * 			String[] type1/2	  -- type either belongs to
-		 * 			String[] restraints -- restraints to be noticed
-		 * 
-		 * 
-		 * driver = "com.mysql.jdbc.Driver";
-		 * url = "jdbc:mysql://localhost:3306/snapost";
-		 * user = "root";
-		 * passwd = "";
-		 * connect to sql through jdbc
-		 * 
-		 * **/
-
 		
 		int count = 0;
 		Connection con = null;
@@ -105,14 +114,20 @@ public class Select
 		String url = "jdbc:mysql://localhost:3306/snapost";
 		String user = "root";
 		String passwd = "";
+		
+		
 		try
 		{
 			Class.forName(driver);
+			
 			con = DriverManager.getConnection(url, user, passwd);
+			
 			stmt = con.createStatement();
 			
 			for(int i = 0; i < elements.length; i++)
 			{
+				//insert "'" between element2
+				
 				if(type[i].equals("char"))
 					elements[i] = "'" + elements[i] + "'";
 				System.out.println(elements[i]);
@@ -121,15 +136,20 @@ public class Select
 			String condition = "";
 			for(int i = 0; i < elements.length; i++)
 				if(i != elements.length - 1)
+					
+					//handle with property and element
+					
 					condition = condition + property[i] + restraints[i] + elements[i] + " AND ";
 				else
 					condition = condition + property[i] + restraints[i] + elements[i];
 				
 			String select = "select * from " + table + " where " + condition;
+			
 			System.out.println(select);
 			rs = stmt.executeQuery(select);
 			
 			ResultSetMetaData rsMetaData;
+			
 			while(rs.next())
 			{
 				rsMetaData = rs.getMetaData();
@@ -141,6 +161,7 @@ public class Select
 			if(rs != null)
 				rs.close();
 			//close stmt
+			
 			if(stmt != null)
 				stmt.close();
 			//close con
@@ -149,6 +170,7 @@ public class Select
 			
 			return count;
 		}
+		
 		catch(Exception e)
 		{
 			e.printStackTrace();
@@ -158,39 +180,44 @@ public class Select
 	
 	
 	
+	
+	
+	/**
+     * API for SelectElement
+     * @param table	  -- certain table
+     * @param selection -- restraints to be noticed
+     * 
+     * 
+     * 
+     * driver = "com.mysql.jdbc.Driver";
+	 * url = "jdbc:mysql://localhost:3306/snapost";
+	 * user = "root";
+	 * passwd = "";
+	 * connect to sql through jdbc
+	 * 
+
+     */
+
+	
 	public static int SelectAllTime(String table, ArrayList<String> selection)
 	{
-		
-		/*
-		 * 
-		 * API for SelectAllTime
-		 * --------PARAMENTERS-------------------------------
-		 * !!NEED!!	String[] elements -- elements to be selected
-		 * 			String[] property -- respect property
-		 * 			String table	  -- certain table
-		 * 			String[] type1/2	  -- type either belongs to
-		 * 			String[] restraints -- restraints to be noticed
-		 * 
-		 * 
-		 * driver = "com.mysql.jdbc.Driver";
-		 * url = "jdbc:mysql://localhost:3306/snapost";
-		 * user = "root";
-		 * passwd = "";
-		 * connect to sql through jdbc
-		 * 
-		 * **/
 
 
 		int count = 0;
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet rs = null;
+		
 		String driver = "com.mysql.jdbc.Driver";
 		String url = "jdbc:mysql://localhost:3306/snapost";
+		
 		String user = "root";
 		String passwd = "";
+		
+		
 		try
 		{
+			
 			Class.forName(driver);
 			con = DriverManager.getConnection(url, user, passwd);
 			stmt = con.createStatement();
@@ -202,24 +229,27 @@ public class Select
 			ResultSetMetaData rsMetaData;
 			while(rs.next())
 			{
+				//get rs data
 				rsMetaData = rs.getMetaData();
 				count = rsMetaData.getColumnCount();
 				for(int i = 0; i < rsMetaData.getColumnCount(); i++)
 					//System.out.println(rs.getString(i + 1));
 					selection.add(rs.getString(i + 1));
 			}
-			
-			
 			if(rs != null)
 				rs.close();
+			
 			//close stmt
 			if(stmt != null)
 				stmt.close();
+			
+			
 			//close con
 			if(con != null)
 				con.close();
 			//return count;
 		}
+		
 		catch(Exception e)
 		{
 			//e.printStackTrace();
@@ -227,6 +257,29 @@ public class Select
 		}
 		return count;
 	}
+	
+	
+	
+	
+	/**
+     * main 
+     * to do stuff about select
+     * 
+     * 
+     * 
+     * not need:
+     * driver = "com.mysql.jdbc.Driver";
+	 * url = "jdbc:mysql://localhost:3306/snapost";
+	 * user = "root";
+	 * passwd = "";
+	 * connect to sql through jdbc
+	 * 
+	 * main jod:
+	 * select picture from database
+	 * 
+
+     */
+
 	public static void main(String[] args)
 	{
 		

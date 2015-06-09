@@ -346,7 +346,10 @@ public class Image {
         
         for (int x = 0; x < width; x ++) {
             for (int y = 0; y < height; y ++) {
+                int rgb0 = bufferedImage.getRGB(x, y);
+                int rgb1 = bufferedImage.getRGB(x, y);
                 int rgb = bufferedImage.getRGB(x, y);
+                
                 result.setRGB(width-x-1, y, rgb); 
             }
         }
@@ -515,8 +518,10 @@ public class Image {
      * @param jump 
      */
 
-    public void combineWithPicture(Image image2, Color ignoreColor){
-        combineWithPicture(image2.getAsBufferedImage(), 2, ignoreColor);
+    public void combineWithPicture(Image image2, Color ignoreColor)
+    {
+        combineWithPicture(image2.getAsBufferedImage(), 
+        		2, ignoreColor);
     }
     
     /**
@@ -531,7 +536,8 @@ public class Image {
      */
 
     public void combineWithPicture(Image image2, int jump, Color ignoreColor){
-            combineWithPicture(image2.getAsBufferedImage(), jump, ignoreColor);
+            combineWithPicture(image2.getAsBufferedImage(), 
+            		jump, ignoreColor);
     }
     
     /**
@@ -638,7 +644,8 @@ public class Image {
     private void saveImage(File file) {
        
     	try {
-            ImageIO.write(bufferedImage, getFileType(file), file);
+            ImageIO.write(bufferedImage, 
+            		getFileType(file), file);
         } 
         catch (IOException e) {
             e.printStackTrace();
@@ -672,7 +679,8 @@ public class Image {
     }
     
     
-    public void emphasize(int startX, int startY, int endX, int endY, Color backgroundColor,int jump){
+    public void emphasize(int startX, int startY, 
+    		int endX, int endY, Color backgroundColor,int jump){
         
         checkJump(jump);
         
@@ -699,7 +707,8 @@ public class Image {
         for (int y = 0; y < height; y ++) {
             for (int x = y%jump; x < width; x +=jump) {
                 
-                if(y >= startY && y <= endY && x >= startX && x <= endX){
+                if(y >= startY && y <= endY && 
+                		x >= startX && x <= endX){
                     continue;
                 }
                 
@@ -769,10 +778,14 @@ public class Image {
     public void affineTransform (double fShxFactor, double fShyFactor) {
 
         try {
-          AffineTransform shearer =
+        	
+        	
+        	AffineTransform shearer =
             AffineTransform.getShearInstance (fShxFactor, fShyFactor);
-          AffineTransformOp shear_op =
+        	
+        	AffineTransformOp shear_op =
             new AffineTransformOp (shearer, null);
+         
           bufferedImage = shear_op.filter (bufferedImage, null);
         }
         catch (Exception e) {
@@ -788,8 +801,11 @@ public class Image {
      */
 
     private String getFileType(File file) {
-        String fileName = file.getName();
+        
+    	
+    	String fileName = file.getName();
         int idx =  fileName.lastIndexOf(".");
+        
         if(idx == -1){
             throw new RuntimeException("Invalid file name");
         }
@@ -857,14 +873,18 @@ public class Image {
       */
         
         Image image  = new Image("c:/pics/p1.jpg");
+        
         int width = image.getWidth();
         int height = image.getHeight();
+        
         for(int i=0,c=0;i<height;c++,i+=50){
             int x = width/2  - i;
             int y = height/2 - i;
             
             image.emphasize(x, y, width-1-x, height-1-y, Color.BLACK, 12 - c/4);
         }
+        
+        
         image.saveAs("c:/pics/emphesizeTrick.jpg");
       //  */
        // image.saveAs("c:/xxx.jpg");
