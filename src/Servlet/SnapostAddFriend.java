@@ -142,7 +142,7 @@ public class SnapostAddFriend extends HttpServlet {
         }
 	 
 	private void refreshOnlineUserList(){
-		//刷新当前在线用户列表
+		
 		
 		try {//send
 			toServer.writeUTF("qou" + currentUser.getName());
