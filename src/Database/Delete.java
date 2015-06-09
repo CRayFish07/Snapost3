@@ -60,6 +60,7 @@ public class Delete
 			String condition = "";
 			for(int i = 0; i < elements.length; i++)
 				if(i != elements.length - 1)
+					//handle with property and element
 					condition = condition + property[i] + restraints[i] + elements[i] + " AND ";
 				else
 					condition = condition + property[i] + restraints[i] + elements[i];
