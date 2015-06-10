@@ -593,14 +593,14 @@ public class Image {
      * 
      *  
      * @param startX
-     * @param startY
-     * @param startY
+     * @param startY1
+     * @param startY2
      * @param endY
      * 
      */
 
     
-    public void crop(int startX, int startY, int startY, int endY){
+    public void crop(int startX, int startY1, int startY2, int endY){
     	
         int width = bufferedImage.getWidth();
         int height = bufferedImage.getHeight();
@@ -609,12 +609,12 @@ public class Image {
             startX = 0;
         }
         
-        if(startY == -1){
-            startY = 0;
+        if(startY2 == -1){
+            startY2 = 0;
         }
         
-        if(endX == -1){
-            endX = width-1;
+        if(startY1 == -1){
+            startY1 = width-1;
         }
         
         if(endY == -1){
@@ -623,13 +623,13 @@ public class Image {
         
         
         
-        BufferedImage result = new BufferedImage(endX-startX+1, 
-                endY-startY+1, bufferedImage.TYPE_INT_BGR);
+        BufferedImage result = new BufferedImage(startY1-startX+1, 
+                endY-startY2+1, bufferedImage.TYPE_INT_BGR);
         
-        for (int y = startY; y < endY; y ++) {
-            for (int x = startX; x < endX; x ++) {
+        for (int y = startY2; y < endY; y ++) {
+            for (int x = startX; x < startY1; x ++) {
                 int rgb = bufferedImage.getRGB(x, y);
-                result.setRGB(x-startX, y-startY, rgb); 
+                result.setRGB(x-startX, y-startY2, rgb); 
             }
         }
         bufferedImage = result;

@@ -123,6 +123,7 @@ public class Insert
 	}
 	public static int InsertMember(String[] values)
 	{
+		//static int theid = 1;
 		Connection con = null;
 		Statement stmt = null;
 		int rs = 0;
@@ -147,6 +148,8 @@ public class Insert
 				else
 					value = value + values[i] +")";
 			}
+			//values[values.length-1] = Integer.toString(theid);
+			//value = value + values[values.length-1] +")";
 			System.out.println(value);
 			
 			//锟斤拷锟斤拷指锟斤拷
